@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Project </title> 
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+        <link rel="stylesheet"  href="style.css">
+
+        <style>
+
+.nav{
+    background-color: whitesmoke;
+    padding: 1px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    z-index: 9;
+}
+
+
+.nav_top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo{
+    width: 20%;
+}
+
+.logo img{
+    padding: 10px;
+}
+
+.nav_side{
+    padding-top: 50px;
+}
+
+
+
+
+.nav_side a{
+    text-decoration: none;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 30px;
+    font-size: medium;
+    font-weight: bold;
+    color:black;
+    transition: 0.1s;
+}
+
+.nav_side a:hover{
+    text-decoration: underline pink;
+    color: orange;
+}
+
+.main{
+    margin-top: 120px;
+    background-image: url("https://wallpaperaccess.com/full/7118427.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:left;
+    height: 100vh;
+    padding-bottom: 100px;
+
+}
+
+.main .main_content{
+    color: whitesmoke;
+    padding-top: 10px;
+    padding-right: 500px;
+    text-shadow: 10px 5px 4px  orange;
+
+}
+
+.main .main_content h2{
+    font-size: 45px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+
+
+.main .main_content h2 span{
+    font-size: large;
+    text-shadow: none;
+    opacity: 0.5;
+}
+
+.main .main_content h2 span:hover{
+    opacity:1;
+    transition: 0.1s;
+    font-weight: 400px;
+
+}
+
+.main .main_content .b1{
+    padding-left: 620px;
+}
+
+.main .main_content .btn{
+    height: 45px;
+    width: 120px;
+    border-radius:10px;
+    font-weight:bold;
+    background-color: orange;
+    text-align: center;
+    border: 2px solid pink;
+    font-style: italic;
+}
+
+
+.main .main_content .btn:hover{
+    background-color: pink;
+    box-shadow: 2px solid orange;
+    text-shadow: 2px solid red  ;
+    font-style:oblique;
+    transition: .5s;
+    
+}
+
+.our_brands{
+    padding-bottom: 50px;
+}
+
+.our_brands h2{
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;
+}
+
+.our_brands .brand_container{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.our_brands .brand_container .item{
+    background-size: cover;
+    width: 33%;
+    margin: 10px;
+    height: auto;
+}
+
+.our_brands .brand_container .item:hover{
+    background-color: wheat;
+    width: 34%;
+}
+
+
+.our_brands .brand_container .item .item_img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.our_brands .brand_container .item .item_img img{
+    width: 100%;
+    height: 250px;
+}
+
+
+.our_brands .brand_container .item .item_content{
+    text-align: center;
+}
+
+.our_brands .brand_container .item .item_content h3{
+    padding: 10px;
+    font-size: 25px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.our_brands .brand_container .item .item_content p{
+    padding: 10px;
+    font-size: 15px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.our_brands .brand_container .item .btn{
+    height: 45px;
+    width: 100px;
+    border-radius:10px;
+    font-weight:bold;
+    background-color: orange;
+    text-align: center;
+    border: 2px solid pink;
+    font-style: italic;
+}
+
+.our_brands .brand_container .item .btn:hover{
+    background-color: pink;
+    border: none;
+    border-bottom: 4px solid orange;
+    transition: 0.5s;
+
+}
+
+.our_brands  .brand_btn{   
+    text-align: center;
+    margin-top: 45px;
+    
+}
+
+.our_brands  .brand_btn .btn{
+    width: 200px;
+    height: 50px;
+    border-radius:10px;
+    font-weight:bold;
+    background-color: orange;
+    text-align: center;
+    border: 2px solid pink;
+    font-style: italic;
+}
+
+
+
+.our_brands .brand_btn .btn:hover{
+    background-color: pink;
+    border: none;
+    border-bottom: 4px solid orange;
+    transition: 0.5s;
+
+}
+
+.keypoint{
+    padding: 50px;
+
+}
+
+.keypoint h2{
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;    
+
+}
+
+.keypoint .key_container{
+    display: flex;
+}
+
+
+.keypoint .key_container .key_content{
+    width: 40%;
+    padding: 20px;
+    float: left;
+}
+
+.keypoint .key_container .key_content li{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border-left: 2px solid orange;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0px 3px 5px 0px #FFC0CB ;
+}
+
+
+.keypoint .key_container .key_img{
+    width: 40%;
+    float: right;
+    margin-left: 100px;
+}
+
+.keypoint .key_container .key_img img{
+    width: 100%;
+    height: 80%;
+}
+
+.testi{
+    padding: 50px;
+}
+
+.testi h2{
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;  
+    text-transform: uppercase;
+}
+
+.testi .testi_container{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.testi .testi_container .item{
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+}
+
+.testi .testi_container .carousel-inner{
+    background-color: white;
+    box-shadow: none;   
+}
+
+.testi .testi_container .item .item_img{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.testi .testi_container .item .item_img img{
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
+
+
+.testi .testi_container .item .item_content{
+    text-align: center;
+}
+
+.testi .testi_container .item .item_content h3{
+    padding: 10px;
+    font-size: 25px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.testi .testi_container .item .item_content p{
+    padding-bottom: 20px;
+    font-size: 15px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer{
+    background-color:wheat;
+    padding: 50px;
+}
+
+footer .logo_img {
+    border-radius: 100px;
+}
+
+footer .pages{
+    text-align: center;
+}
+
+footer .pages h3{
+    color: black;
+    font-size: 20px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+}
+
+footer .pages a{
+    text-decoration: none;
+    margin: 10px;
+    color:rebeccapurple
+}
+
+footer .pages a:hover{
+    color: orangered;
+}
+
+footer .documents{
+    text-align: center;
+}
+
+footer .documents h3{
+    color: black;
+    font-size: 20px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+}
+
+footer .documents a{
+    text-decoration: none;
+    margin: 10px;
+    color:rebeccapurple
+}
+
+footer .documents a:hover{
+    color: orangered;
+}
+
+
+footer .social_media{
+    text-align: center;
+}
+
+footer .social_media h3{
+    color: black;
+    font-size: 20px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+}
+
+footer .social_media a{
+    text-decoration: none;
+    margin: 10px;
+    color:rebeccapurple
+}
+
+footer .social_media a:hover{
+    color: orangered;
+}
+
+
+footer .contact{
+    text-align: center;
+}
+
+footer .contact h3{
+    color: black;
+    font-size: 20px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+}
+
+footer .contact a{
+    text-decoration: none;
+    margin: 10px;
+    color:rebeccapurple
+}
+
+footer .contact a:hover{
+    color: orangered;
+}
+
+.team .team_container{
+    display: flex;
+}
+
+.team .team_container .team_video{
+    width: 50%;
+    padding: 20px;  
+}
+
+.team .team_container .team_video iframe{
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    border: 10px solid pink;
+    outline: none;
+}
+
+.team .team_container .team_content{
+    width: 40%;
+    padding: 30px;
+    margin-left: 40px ;
+
+}
+
+.team .team_container .team_content p{
+    padding: 10px;
+    font-size: 15px;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    
+}
+
+
+.team{
+    padding: 50px;
+}
+
+.team h2{
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;  
+    text-transform: uppercase;
+}
+
+.feed {
+    padding: 50px;  
+    background-image: url(https://blog.bonus.ly/hubfs/feedback-examples-featured-01-2.png);
+    background-size: cover;
+}
+
+.feed h2{
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;  
+    text-transform: uppercase;
+
+}
+
+
+.feed .feed_form{
+    text-align: center;
+}
+
+
+.feed .feed_form form{
+    padding: 20px;
+}
+
+
+.feed .feed_form form input{
+    width: 30%;
+    margin: 10px;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+
+.feed .feed_form form textarea{
+    width: 30%;
+    margin: 10px;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+
+.feed .feed_form form button{
+    width: 30%;
+    margin: 10px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+}
+
+.about_us{
+    padding: 50px;  
+    background-image: url(https://images.template.net/110293/dark-teal-solid-background-02td9.jpeg);
+    color: white;
+    background-size: cover;
+
+}
+
+.about_us h2{
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: pink;
+    font-size: 45px;
+    text-align: center;
+    padding: 20px;  
+    text-transform: uppercase;
+}
+
+.about_us h2:hover{
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: orangered;
+    font-size: 45px;
+    text-align: center;
+    padding: 20px;  
+    text-transform: uppercase;
+}
+
+.about_us .about_content{
+    width: 100%;
+    text-align: center;
+}
+
+.about_us .about_content h3{
+    color: orange;
+    font-weight: bold;
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about_us .about_content p{
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.contact_container{
+    padding: 10px;
+}
+
+.contact_container h2{
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: pink;
+    font-size: 45px;
+    text-align: center;
+    padding: 10px;  
+    text-transform: uppercase;
+}
+
+.contact_container h2:hover{
+    color: orange;
+}
+
+.contact_container .g_map{
+    width: 67%;
+    margin-left: 17%;
+    margin-right: 17%;  
+}
+
+.contact_container .contact_content{
+    padding: 20px;
+}
+
+.contact_container .contact_content p{
+    font-family: news system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+
+
+
+
+
+        </style>
+
+
+        
+
+    </head>
+
+    <body>
+
+        <div class="nav_div">
+            <nav class="nav nav_top">
+                <div class="logo">
+                    <a href="https://www.myntra.com" target="_blank"><img src="myntra_gif.gif" width="150"></a>
+                </div>
+    
+                <div class="nav_side">
+                    <a href="https://www.myntra.com/shop/men" target="_blank">MEN</a>
+                    <a href="https://www.myntra.com/shop/women" target="_blank">WOMEN</a>
+                    <a href="https://www.myntra.com/shop/kids" target="_blank">KIDS</a>
+                    <a href="https://www.myntra.com/home-living" target="_blank">HOME&LIVING</a>
+                    <a href="https://www.myntra.com/login" target="_blank">LOGIN/REGISTER</a>
+                    <a href="file:///C:/Users/theja/Desktop/html-css-course/my_project/about.html" target="_blank">ABOUT US</a>
+                    <a href="file:///C:/Users/theja/Desktop/html-css-course/my_project/services.html" target="_blank">SERVICES</a>
+                    <a href="file:///C:/Users/theja/Desktop/html-css-course/my_project/contact.html" target="_blank">CONTACT US</a>
+                    <a href="https://www.myntra.com/profile" target="_blank"><i class="fa fa-user"></i></a>
+    
+                </div>
+                   
+            </nav>
+
+        </div>
+
+        
+
+        <div class="main">
+            <div class="main_content">
+                <h2>Fashion is an Art & Creativity!<br>
+                <span> "Fashion is like eating; You shouldn't
+                        stick to the same menu."</span>
+                    </h2> 
+                
+                <div class="b1">
+                    <a href="https://www.myntra.com/studio/explore?appRoute=%7B%22url%22%3A%22%2Fstudio%2Fexplore%22%7D" target="_blank"><button class="btn">Explore Now</button></a>
+                </div>
+            </div>  
+        </div>
+
+
+        <div class="our_brands">
+            <h2>OUR BRANDS</h2>
+            
+            <div class="brand_container">
+                <div class="item">
+                    <div class="item_img">
+                        <a href="https://www.myntra.com/men-topwear" target="_blank"><img src="https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/a/AmazonStores/A21TJRUUN4KGV/a42cf322184e7b55931ca27012c83dab.w3000.h3000._CR0%2C0%2C3000%2C3000_SX750_SY750_.jpg"></a>
+                    </div>
+
+                    <div class="item_content">
+                        <h3>Topwear</h3>
+                        <p>It takes 700 gallons of water to make a cotton shirt. Once we throw out our clothes,
+                             we accept the fact that we’ll never see them again.</p>
+                        <a href="https://www.myntra.com/men-topwear" target="_blank"><button class="btn">Buy Now</button></a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item_img">
+                        <a href="https://www.myntra.com/men-footwear" target="_blank"><img src="http://blog.logomyway.com/wp-content/uploads/2017/11/adidas-shoes.jpg"></a>
+                    </div>
+
+                    <div class="item_content">
+                        <h3>Footwear</h3>
+                        <p>Shoes are the defining piece that creates a style. They make a statement and add function to live fashion.</p>
+                        <a href="https://www.myntra.com/men-footwear" target="_blank"><button class="btn">Buy Now</button></a>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="item_img">
+                        <a href="https://www.myntra.com/gadgets" target="_blank"><img src="https://api.time.com/wp-content/uploads/2017/08/the-goods-back-toschool.jpg"></a>
+                    </div>
+
+                    <div class="item_content">
+                        <h3>Gadgets</h3>
+                        <p>A gadget is a mechanical device or any ingenious article.
+                             Gadgets are sometimes referred to as gizmos.</p>
+                        <a href="https://www.myntra.com/gadgets" target="_blank"><button class="btn">Buy Now</button></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="brand_btn">
+                <a href="https://www.myntra.com/explore"><button class="btn">Explore Our Products</button></a>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="keypoint">
+            <h2>OUR KEY HIGHLIGHTS</h2>
+            <div class="key_container">
+                <div class="key_content">
+                    <li>La moda es una forma de autoexpresión y autonomía.</li>
+                    <li>La moda es una forma de autoexpresión y autonomía.</li>
+                    <li>La moda es una forma de autoexpresión y autonomía.</li>
+                    <li>La moda es una forma de autoexpresión y autonomía.</li>
+                    <li>La moda es una forma de autoexpresión y autonomía.</li>
+                    <li>La moda es una forma de autoexpresión y autonomía.</li>
+                    <li>La moda es una forma de autoexpresión y autonomía.</li>
+                </div>
+                <div class="key_img">
+                    <img src="https://img.favpng.com/15/25/11/fashion-model-clothing-royalty-free-png-favpng-k2531nmnSkixWyWF4sZaKNXpT.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="testi">
+            <h2>Our Clients</h2>
+            <div class="testi_container">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                  
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                            <div class="item_img">
+                                <img src="https://i.pinimg.com/736x/01/95/82/01958236733281d8467cdf63484bfbed.jpg" alt="...">
+                            </div>
+                            <div class="item_content">
+                                <h3>Abc</h3>
+                                <p>A slideshow component for cycling through elements, like a carousel. Nested carousels are not supported.</p>
+                            </div>
+                        </div>
+
+                      <div class="item">
+                        <div class="item_img">
+                            <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202109/242473827_10160157467293221_2645921924837005982_n-sixteen_nine.jpg" alt="...">
+                        </div>
+                        <div class="item_content">
+                            <h3>Abc</h3>
+                            <p>A slideshow component for cycling through elements, like a carousel. Nested carousels are not supported.</p>
+                        </div>
+                      </div>
+
+
+                     <div class="item">
+                        <div class="item_img">
+                            <img src="https://pbs.twimg.com/media/FJXNGoTacAEXRWb.jpg" alt="...">
+                        </div>
+                        <div class="item_content">
+                            <h3>Abc</h3>
+                            <p>A slideshow component for cycling through elements, like a carousel. Nested carousels are not supported.</p>
+                        </div>
+                        </div>
+
+                    </div>
+                  
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+            </div>
+        </div>
+    
+    <hr>
+
+    <div class="team">
+        <h2>OUR TEAM</h2>
+        <div class="team_container">
+            <div class="team_video" > 
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/sJFuDRmCDXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="team_content">
+                <p> Myntra is a major Indian fashion e-commerce company headquartered in Bengaluru, Karnataka, India. 
+                    The company was founded in 2007-2008 to sell personalized gift items. In May 2014,
+                     Myntra.com was acquired by Flipkart.   </p>
+                <p>
+                    Myntra is a one stop shop for all your fashion and lifestyle needs. Being India's largest
+                     e-commerce store for fashion and lifestyle products, Myntra aims at providing a hassle free 
+                     and enjoyable shopping experience to shoppers across the country with the widest range of 
+                     brands and products on its portal. The brand is making a conscious effort to bring the power
+                      of fashion to shoppers with an array of the latest and trendiest products available in the country
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="feed">
+        <h2>Write a Review</h2>
+        <div class="feed_form" >
+            <form method="post"  id="submit_gs" name="submit_gs" action="https://script.google.com/macros/s/AKfycbzDOQkFdX_VtB9UKOuddDRUcNP7uM_id64foI69wxRXFNUqesWNFqrk8RS6JfJkTQfG/exec">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email" placeholder="Email"><br>
+                <input type="number" name="Mobile" placeholder="Contact Number"><br>
+                <textarea rows="5" cols="7" name="Review" placeholder="Write a Review"></textarea><br>
+                <button type="submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="logo">
+            <a href="file:///C:/Users/theja/Desktop/html-css-course/my_project/index.html" target="_blank"><img class="logo_img" src="myntra_gif.gif" width="150"></a>
+        </div>
+
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="file:///C:/Users/theja/Desktop/html-css-course/my_project/about.html" target="_blank">ABOUT US</a>|
+            <a href="file:///C:/Users/theja/Desktop/html-css-course/my_project/services.html" target="_blank">SERVICES</a>|
+            <a href="file:///C:/Users/theja/Desktop/html-css-course/my_project/contact.html" target="_blank">CONTACT US</a>|
+            <a href="">Blogs</a>|
+            <a href="">Login</a>|
+            <a href="">Sign Up</a>
+        </div>
+
+        <div class="documents">
+            <h3>Documents</h3>
+            <a href="">Privacy Policy</a>|
+            <a href="">Terms Of Use</a>|
+            <a href="">Refund Policy</a>
+        </div>
+
+        <div class="social_media">
+            <h3>Follow Us</h3>
+            <a href="https://twitter.com/myntra?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter  &nbsp<i class="fa fa-twitter aria-hidden:true"></i></a>|
+            <a href="https://www.facebook.com/myntra/">Facebook &nbsp<i class="fa fa-facebook aria-hidden:true"></i></a>|
+            <a href="https://www.instagram.com/myntra/?hl=en">Instagram &nbsp<i class="fa fa-instagram aria-hidden:true"></i></a>|
+            <a href="https://www.linkedin.com/company/myntra/?originalSubdomain=in  ">LinkedIn &nbsp<i class="fa fa-linkedin aria-hidden:true"></i></a>
+        </div>
+
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="mailto: communications@Myntra.com">Email  &nbsp<i class="fa fa-envelope aria-hidden:true"></i></a>|
+            <a href="tel: +91080-6156 1999 ">Phone &nbsp<i class="fa fa-phone aria-hidden:true"></i></a>|
+            <a href="https://api.Whatsapp.com/send?phone=+918904178116" target="_blank">Whatsapp &nbsp<i class="fa fa-phone aria-hidden:true"></i></a>|
+            <a href="file:///C:/Users/theja/Desktop/html-css-course/my_project/contact.html" target="_blank">Yahoo &nbsp<i class="fa fa-yahoo aria-hidden:true"></i></a>
+
+
+        </div>
+        <hr>
+
+        <p>Copyrights &copy; 2022 myMyntra. All rights reserved.</p>
+         
+    </footer>
+
+
+        
+        
+    
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   
+
+<script type="text/javascript">
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwrN0qFpZ40A-U-1S_UH5HAPV8WcsgBOs8sLNqI2mMeQjO-3x1F2-296IIrxnYC2VE0/exec"
+
+  const form = document.forms['submit_gs']
+
+  form.addEventListener("submit", e => {
+    e.preventDefault()
+    fetch(scriptURL , {
+        method : "POST",
+        body: new FormData(form)
+    }).then(
+        response => alert('Thank you for feedback! Have a Great Shop Day!')
+    ).catch(
+        error => console.error("Error!", error.message)
+    )
+    form.reset();
+  })
+</script>
+
+    </body>
+   
+</html>
